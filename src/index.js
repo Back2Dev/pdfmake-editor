@@ -21,4 +21,4 @@ export default PdPlayground;
 
  
 
-export EditorProvider
+export { EditorProvider, Playground };
