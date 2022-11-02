@@ -44,7 +44,7 @@ export const EditorProvider = ({ children, code, setCode }) => {
     filename: "New File",
     darktheme: false,
     cmeditor: true,
-    err: source || "",
+    err: "",
   });
   // const setCode = (data) => {
   //   dispatch({ type: "setCode", payload: data });

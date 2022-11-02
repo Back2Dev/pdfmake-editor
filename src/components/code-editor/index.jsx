@@ -13,7 +13,8 @@ import { javascript } from "@codemirror/lang-javascript";
 import { basicSetup } from "codemirror";
 import { lintKeymap } from "@codemirror/lint";
 
-import { oneDarkTheme } from "@codemirror/theme-one-dark";
+import "./index.css";
+
 // pdfmake dependencies
 import pdfMake from "pdfmake/build/pdfmake";
 import * as pdfFonts from "pdfmake/build/vfs_fonts";
@@ -42,6 +43,7 @@ let myTheme = EditorView.theme(
   },
   { dark: true }
 );
+import { oneDarkTheme } from "@codemirror/theme-one-dark";
 
 const Playground = () => {
   const { cmeditor, err, setErr, code, setCode, darktheme } =
