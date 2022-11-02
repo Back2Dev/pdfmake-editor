@@ -1,0 +1,12 @@
+.logo {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+}
+.logo a{
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: #0074c1;
+}
