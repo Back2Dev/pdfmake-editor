@@ -29,6 +29,19 @@ const App = () => {
 export default App;
 ```
 
+Use whole page for pd-playground
+
+```javascript
+import React from "react";
+import PdfPlayground from "pd-playground";
+
+const App = () => {
+  return <PdfPlayground />;
+};
+
+export default App;
+```
+
 ### Version
 
 ### Local development
