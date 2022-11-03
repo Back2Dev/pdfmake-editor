@@ -1,7 +1,7 @@
 import React from "react";
-import Playground from "./index";
-import { EditorProvider } from "./provider";
-import './index.css';
+import Playground from "../components/code-editor/index";
+import { EditorProvider } from "../components/code-editor/provider";
+import "./components/code-editor/index.css";
 
 export default {
   title: "pdmake/Playground",
@@ -10,11 +10,11 @@ export default {
 
 const Template = (args) => {
   return (
-    <EditorProvider {...args} >
+    <EditorProvider {...args}>
       <Playground />
     </EditorProvider>
-  )
-}
+  );
+};
 
 export const Playground1 = Template.bind({});
 
