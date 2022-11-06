@@ -10,7 +10,7 @@ npm i pd-playground
 
 ```javascript
 import React from "react";
-import { EditorProvider, Playground } from "pd-playground";
+import PdfPlayground from "pd-playground";
 
 const App = () => {
   // initial code
@@ -20,27 +20,11 @@ const App = () => {
   const [code, setCode] = React.useState(initialCode);
 
   return (
-    <EditorProvider code={code} setCode={setCode}>
-      <Playground />
-    </EditorProvider>
+    <PdfPlayground code={code} setCode={setCode} />
   );
 };
 
 export default App;
-```
-
-Use whole page for pd-playground
-
-```javascript
-import React from "react";
-import PdfPlayground from "pd-playground";
-
-const App = () => {
-  return <PdfPlayground />;
-};
-
-export default App;
-```
 
 ### Version
 
