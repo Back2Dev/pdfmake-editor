@@ -28,10 +28,10 @@ h1 {
 
 /* Code-Editor Style */
 .cm-editor {
-  height: calc(100vh - 121px);
+  height: 560px;
 }
 .text-editor {
-  height: calc(100vh - 133px);
+  height: 560px;
 }
 
 .split {

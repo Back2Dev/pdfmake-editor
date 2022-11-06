@@ -13,12 +13,22 @@ import { javascript } from "@codemirror/lang-javascript";
 import { basicSetup } from "codemirror";
 import { lintKeymap } from "@codemirror/lint";
 
-import "./index.css";
+import "./style.css";
 
 // pdfmake dependencies
 import pdfMake from "pdfmake/build/pdfmake";
-import * as pdfFonts from "pdfmake/build/vfs_fonts";
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
+// import * as pdfFonts from "pdfmake/build/vfs_fonts";
+// pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
+pdfMake.fonts ={
+  // download default Roboto font from cdnjs.com
+  Roboto: {
+    normal: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
+    bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
+    italics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf',
+    bolditalics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf'
+  }
+}
 
 let myTheme = EditorView.theme(
   {
@@ -143,10 +153,10 @@ const Playground = () => {
   return (
     <>
       <Grid container className="main-area">
-        <Box width="100vw">
-          <Split className="split">
-            <Grid item>
-              <Box sx={{ bgcolor: "#2a313e", height: "100%", color: "#ffffff" }}>
+        <Box sx={{height: 1}} width="100vw">
+          <Split sx={{height: 1}} className="split">
+            <Grid sx={{height: 1}} item>
+              <Box sx={{ bgcolor: "#2a313e", height: 1, color: "#ffffff", overflowY: "scroll"}}>
                 {cmeditor && <div ref={editor} onChange={onChange}></div>}
                 {false && <div className="cm-editor" />}
                 {!cmeditor && (

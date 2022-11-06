@@ -6,20 +6,22 @@ import Footer from "./footer/footer";
 
 export { EditorProvider, Playground };
 
-const PdfPlayground = () => {
+console.log(Playground);
+
+const PdfPlayground = ({code, setCode}) => {
   // initial code
   const initialCode = 'dd = {content: "Hello "}';
 
   // code state
-  const [code, setCode] = React.useState(initialCode);
+  // const [code, setCode] = React.useState(initialCode);
 
   return (
     <>
       <EditorProvider code={code} setCode={setCode}>
-        <Header />
+        {/* <Header /> */}
         <Playground />
       </EditorProvider>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
