@@ -50,8 +50,8 @@ pull the repository to local
 cd to 'pd-playground' folder
 
 ```
-sudo npm link
-sudo npm link  'test react folder'/node_modules/react
+npm link
+npm link  'test react folder'/node_modules/react
 ```
 
 Then go to Test folder
