@@ -1,27 +1,20 @@
 import React from "react";
 import { EditorProvider } from "./components/code-editor/provider";
 import Playground from "./components/code-editor";
-import Header from "./header/header";
-import Footer from "./footer/footer";
 
 export { EditorProvider, Playground };
 
-console.log(Playground);
-
-const PdfPlayground = ({code, setCode}) => {
-  // initial code
-  const initialCode = 'dd = {content: "Hello "}';
-
-  // code state
-  // const [code, setCode] = React.useState(initialCode);
-
+const PdfPlayground = ({ code, setCode, darktheme = false, cmeditor = true }) => {
   return (
     <>
-      <EditorProvider code={code} setCode={setCode}>
-        {/* <Header /> */}
+      <EditorProvider
+        code={code}
+        setCode={setCode}
+        darktheme={darktheme}
+        cmeditor={cmeditor}
+      >
         <Playground />
       </EditorProvider>
-      {/* <Footer /> */}
     </>
   );
 };

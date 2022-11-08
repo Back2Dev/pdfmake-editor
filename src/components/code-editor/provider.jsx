@@ -7,11 +7,6 @@ export default EditorContext;
 function editorReducer(state, action) {
   const { type, payload } = action;
   switch (type) {
-    // case "setCode":
-    //   return {
-    //     ...state,
-    //     code: payload,
-    //   };
     case "setFilename":
       return {
         ...state,
@@ -38,17 +33,11 @@ function editorReducer(state, action) {
 }
 
 // Provider
-export const EditorProvider = ({ children, code, setCode }) => {
+export const EditorProvider = ({ children, code, setCode, darktheme, cmeditor }) => {
   const [state, dispatch] = React.useReducer(editorReducer, {
-    // code: source || 'dd = {content: "Hello "}',
     filename: "New File",
-    darktheme: false,
-    cmeditor: true,
     err: "",
   });
-  // const setCode = (data) => {
-  //   dispatch({ type: "setCode", payload: data });
-  // };
   const setFilename = (data) => {
     dispatch({ type: "setFilename", payload: data });
   };
@@ -68,6 +57,8 @@ export const EditorProvider = ({ children, code, setCode }) => {
         ...state,
         code,
         setCode,
+        darktheme,
+        cmeditor,
         setFilename,
         setCmeditor,
         setDarkTheme,

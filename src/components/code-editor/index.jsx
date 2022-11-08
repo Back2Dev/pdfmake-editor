@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useCallback, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import EditorContext from "./provider";
 import Split from "react-split";
 import { Box, Grid, FormGroup, Button } from "@mui/material";
@@ -17,18 +17,19 @@ import "./style.css";
 
 // pdfmake dependencies
 import pdfMake from "pdfmake/build/pdfmake";
-// import * as pdfFonts from "pdfmake/build/vfs_fonts";
-// pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
-pdfMake.fonts ={
+pdfMake.fonts = {
   // download default Roboto font from cdnjs.com
   Roboto: {
-    normal: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf',
-    bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf',
-    italics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf',
-    bolditalics: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf'
-  }
-}
+    normal:
+      "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Regular.ttf",
+    bold: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Medium.ttf",
+    italics:
+      "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-Italic.ttf",
+    bolditalics:
+      "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/fonts/Roboto/Roboto-MediumItalic.ttf",
+  },
+};
 
 let myTheme = EditorView.theme(
   {
@@ -153,10 +154,17 @@ const Playground = () => {
   return (
     <>
       <Grid container className="main-area">
-        <Box sx={{height: 1}} width="100vw">
-          <Split sx={{height: 1}} className="split">
-            <Grid sx={{height: 1}} item>
-              <Box sx={{ bgcolor: "#2a313e", height: 1, color: "#ffffff", overflowY: "scroll"}}>
+        <Box sx={{ height: 1 }} width="100vw">
+          <Split sx={{ height: 1 }} className="split">
+            <Grid sx={{ height: 1 }} item>
+              <Box
+                sx={{
+                  bgcolor: "#2a313e",
+                  height: 1,
+                  color: "#ffffff",
+                  overflowY: "scroll",
+                }}
+              >
                 {cmeditor && <div ref={editor} onChange={onChange}></div>}
                 {false && <div className="cm-editor" />}
                 {!cmeditor && (
