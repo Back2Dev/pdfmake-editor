@@ -4,7 +4,7 @@ import Playground from "./components/code-editor";
 
 export { EditorProvider, Playground };
 
-const PdfPlayground = ({ code, setCode, darktheme = false, cmeditor = true }) => {
+const PdfPlayground = ({ code, setCode, cmeditor = true, darktheme = false }) => {
   return (
     <>
       <EditorProvider

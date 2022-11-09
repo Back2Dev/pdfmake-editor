@@ -6,7 +6,9 @@
 npm i pd-playground
 ```
 
-### Useage
+### Usage
+
+#### Only use pdfPlayground
 
 ```javascript
 import React from "react";
@@ -19,15 +21,46 @@ const App = () => {
   // code state
   const [code, setCode] = React.useState(initialCode);
 
+  // code and setCode is necessary
+  // cmeditor is available default value is true. True mean use Codermirror.
+  // darktheme is available default value is false. Change the theme for Codermirror.
   return (
     <PdfPlayground code={code} setCode={setCode} />
+    // <PdfPlayground code={code} setCode={setCode} cmeditor={true} darktheme={false} />
   );
 };
 
 export default App;
 ```
 
-### Version
+#### Use provider
+
+```javascript
+import React from "react";
+import { EditorProvider, Playground } from "pd-playground";
+
+const App = () => {
+  // initial code
+  const initialCode = 'dd = {content: "Hello "}';
+
+  // code state
+  const [code, setCode] = React.useState(initialCode);
+
+  // code and setCode is necessary
+  // cmeditor default value is false,  if use Codermirror need set cmeditor to true
+  // darktheme default value is false.
+  return (
+    <EditorProvider code={code} setCode={setCode} cmeditor={true}>
+      <Playground />
+    </EditorProvider>
+    // <EditorProvider code={code} setCode={setCode} cmeditor={true} darktheme={true}>
+    //   <Playground />
+    // </EditorProvider>
+  );
+};
+
+export default App;
+```
 
 ### Local development
 

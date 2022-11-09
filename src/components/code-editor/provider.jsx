@@ -37,6 +37,8 @@ export const EditorProvider = ({ children, code, setCode, darktheme, cmeditor })
   const [state, dispatch] = React.useReducer(editorReducer, {
     filename: "New File",
     err: "",
+    darktheme: darktheme || false,
+    cmeditor: cmeditor,
   });
   const setFilename = (data) => {
     dispatch({ type: "setFilename", payload: data });
@@ -57,8 +59,6 @@ export const EditorProvider = ({ children, code, setCode, darktheme, cmeditor })
         ...state,
         code,
         setCode,
-        darktheme,
-        cmeditor,
         setFilename,
         setCmeditor,
         setDarkTheme,
