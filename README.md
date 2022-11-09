@@ -62,6 +62,19 @@ const App = () => {
 export default App;
 ```
 
+#### samples
+
+Use sample by import `mapForms` and `samples` javascript object.
+
+```javascript
+import { mapForms, samples } from "pd-playground";
+
+...
+
+return <PdfPlayground code={mapForms[Object.keys(mapForms)[0]]} />
+
+```
+
 ### Local development
 
 pull the repository to local
