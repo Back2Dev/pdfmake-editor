@@ -1,3 +1,4 @@
 /node_modules
 /src/stories
 .strorybook
+/storybook-static
