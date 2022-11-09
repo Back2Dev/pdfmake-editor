@@ -3,14 +3,14 @@
 ### Install
 
 ```
-npm i pd-playground
+npm i pdmake-editor
 ```
 
 ### Useage
 
 ```javascript
 import React from "react";
-import PdfPlayground from "pd-playground";
+import PdfEditor from "pdfmake-editor
 
 const App = () => {
   // initial code
@@ -20,7 +20,7 @@ const App = () => {
   const [code, setCode] = React.useState(initialCode);
 
   return (
-    <PdfPlayground code={code} setCode={setCode} />
+    <PdfEditor code={code} setCode={setCode} />
   );
 };
 
@@ -36,13 +36,12 @@ cd to 'pd-playground' folder
 
 ```
 npm link
-npm link  'test react folder'/node_modules/react
 ```
 
 Then go to Test folder
 
 ```
-npm link pd-Playground
+npm link pdfmake-editor
 ```
 
 When you finish test remember to unlink by use
