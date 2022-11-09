@@ -16,9 +16,9 @@ const Template = (args) => {
   );
 };
 
-export const Question1 = Template.bind({});
+export const Style = Template.bind({});
 
-Question1.args = {
+Style.args = {
   code: 'dd = {content: "Hello "}',
   cmeditor: true,
   darktheme: false,
