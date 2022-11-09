@@ -4,15 +4,17 @@
   "description": "pdf-playground",
   "main": "./src/index.jsx",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "b2b",
   "license": "ISC",
   "peerDependencies": {
     "@babel/core": "7.14.8",
+    "pdfmake": "^0.2.5",
     "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "pdfmake": "^0.2.5"
+    "react-dom": "17.0.2"
   },
   "dependencies": {
     "@codemirror/commands": "^6.1.2",
@@ -33,5 +35,16 @@
     "react-router-dom": "^6.4.2",
     "react-split": "^2.0.14"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-webpack4": "^6.5.13",
+    "@storybook/manager-webpack4": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.3.0"
+  }
 }

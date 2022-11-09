@@ -47,10 +47,10 @@ const App = () => {
   const [code, setCode] = React.useState(initialCode);
 
   // code and setCode is necessary
-  // cmeditor default value is false,  if use Codermirror need set cmeditor to true
+  // cmeditor default value is true.
   // darktheme default value is false.
   return (
-    <EditorProvider code={code} setCode={setCode} cmeditor={true}>
+    <EditorProvider code={code} setCode={setCode}>
       <Playground />
     </EditorProvider>
     // <EditorProvider code={code} setCode={setCode} cmeditor={true} darktheme={true}>
