@@ -7,26 +7,16 @@ export default EditorContext;
 function editorReducer(state, action) {
   const { type, payload } = action;
   switch (type) {
+    case "setCode":
+      return { ...state, code: payload };
     case "setFilename":
-      return {
-        ...state,
-        filename: payload,
-      };
+      return { ...state, filename: payload };
     case "setDarkTheme":
-      return {
-        ...state,
-        darktheme: payload,
-      };
+      return { ...state, darktheme: payload };
     case "setCmeditor":
-      return {
-        ...state,
-        cmeditor: payload,
-      };
+      return { ...state, cmeditor: payload };
     case "setErr":
-      return {
-        ...state,
-        err: payload,
-      };
+      return { ...state, err: payload };
     default:
       return state;
   }
@@ -46,6 +36,12 @@ export const EditorProvider = ({
     darktheme: darktheme,
     cmeditor: cmeditor,
   });
+
+  setCode = setCode
+    ? setCode
+    : (data) => {
+        dispatch({ type: "setCode", payload: data });
+      };
   const setFilename = (data) => {
     dispatch({ type: "setFilename", payload: data });
   };
