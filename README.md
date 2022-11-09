@@ -6,9 +6,7 @@
 npm i pd-playground
 ```
 
-### Usage
-
-#### Only use pdfPlayground
+### Use PdfPlayground
 
 ```javascript
 import React from "react";
@@ -33,7 +31,7 @@ const App = () => {
 export default App;
 ```
 
-#### Use provider
+### Use provider
 
 ```javascript
 import React from "react";
@@ -62,7 +60,7 @@ const App = () => {
 export default App;
 ```
 
-#### samples
+#### Samples
 
 Use sample by import `mapForms` and `samples` javascript object.
 
@@ -77,10 +75,11 @@ return <PdfPlayground code={mapForms[Object.keys(mapForms)[0]]} />
 
 ### Local development
 
-pull the repository to local
+Pull the repository to local
 cd to 'pd-playground' folder
 
 ```
+npm i
 npm link
 npm link  'test react folder'/node_modules/react
 ```
