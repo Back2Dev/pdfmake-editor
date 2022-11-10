@@ -65,13 +65,16 @@ export default App;
 Use sample by import `mapForms` and `samples` javascript object.
 
 ```javascript
+import React from "react";
 import { mapForms, samples } from "pdfmake-editor";
 import PdfEditor from "pdfmake-editor";
 
-...
+const App = () => {
+  const [code, setCode] = React.useState(mapForms[Object.keys(mapForms)[0]]);
+  return <PdfEditor code={code} setCode={setCode} />;
+};
 
-return <PdfEditor code={mapForms[Object.keys(mapForms)[0]]} />
-
+export default App;
 ```
 
 ### Local development
