@@ -1,5 +1,5 @@
 import React from "react";
-import Playground from "../components/code-editor/index";
+import EditorPlayground from "../components/code-editor/editor-playground";
 import { EditorProvider } from "../components/code-editor/provider";
 import "../components/code-editor/style.css";
 import Q1 from "../sample/map-forms/q1";
@@ -14,7 +14,7 @@ import Q18 from "../sample/map-forms/q18";
 
 export default {
   title: "MAP-Forms",
-  component: Playground,
+  component: EditorPlayground,
 };
 const data = {
   q1: Q1,
@@ -31,7 +31,7 @@ const data = {
 const Template = (args) => {
   return (
     <EditorProvider {...args}>
-      <Playground />
+      <EditorPlayground />
     </EditorProvider>
   );
 };

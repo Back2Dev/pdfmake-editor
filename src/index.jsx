@@ -48,22 +48,3 @@ const mapForms = {
 export { EditorProvider, EditorPlayground, mapForms, samples };
 
 export default PdfEditor;
-
-// const PdfPlayground = ({ code, setCode, cmeditor = true, darktheme = false }) => {
-//   cmeditor = cmeditor;
-//   darktheme = darktheme;
-//   return (
-//     <>
-//       <EditorProvider
-//         code={code}
-//         setCode={setCode}
-//         darktheme={darktheme}
-//         cmeditor={cmeditor}
-//       >
-//         <EditorPlayground />
-//       </EditorProvider>
-//     </>
-//   );
-// };
-
-// export default PdfPlayground;

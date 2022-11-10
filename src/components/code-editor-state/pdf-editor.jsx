@@ -12,7 +12,7 @@ import { javascript } from "@codemirror/lang-javascript";
 import { basicSetup } from "codemirror";
 import { lintKeymap } from "@codemirror/lint";
 
-import "./style.css";
+import "../code-editor/style.css";
 
 // pdfmake dependencies
 import pdfMake from "pdfmake/build/pdfmake";
@@ -57,10 +57,6 @@ import { oneDarkTheme } from "@codemirror/theme-one-dark";
 
 const PdfEditor = ({ code, setCode, cmeditor = true, darktheme = false }) => {
   const [err, setErr] = React.useState("");
-  if (setCode) {
-    const [code, setCode] = React.useState("");
-    setCode(code);
-  }
   const editor = useRef();
   const view = useRef();
 

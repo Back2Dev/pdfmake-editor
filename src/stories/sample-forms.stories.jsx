@@ -1,5 +1,5 @@
 import React from "react";
-import Playground from "../components/code-editor/index";
+import EditorPlayground from "../components/code-editor/editor-playground";
 import { EditorProvider } from "../components/code-editor/provider";
 import "../components/code-editor/style.css";
 
@@ -14,7 +14,7 @@ import margin from "../sample/sample-files/margin";
 
 export default {
   title: "Sample-Forms",
-  component: Playground,
+  component: EditorPlayground,
 };
 const samples = {
   BASICS: basics,
@@ -30,7 +30,7 @@ const samples = {
 const Template = (args) => {
   return (
     <EditorProvider {...args}>
-      <Playground />
+      <EditorPlayground />
     </EditorProvider>
   );
 };
