@@ -85,7 +85,6 @@ cd to 'pdfmake-editor' folder
 ```
 npm i
 npm link
-npm link  'test react folder'/node_modules/react
 ```
 
 Then go to Test folder
