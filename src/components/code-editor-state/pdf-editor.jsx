@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react";
-import EditorContext from "./provider";
 import Split from "react-split";
 import { Box, Grid, FormGroup, Button } from "@mui/material";
 // codeeditor dependencies
@@ -56,9 +55,12 @@ let myTheme = EditorView.theme(
 );
 import { oneDarkTheme } from "@codemirror/theme-one-dark";
 
-const Playground = () => {
-  const { cmeditor, err, setErr, code, setCode, darktheme } =
-    React.useContext(EditorContext);
+const PdfEditor = ({ code, setCode, cmeditor = true, darktheme = false }) => {
+  const [err, setErr] = React.useState("");
+  if (setCode) {
+    const [code, setCode] = React.useState("");
+    setCode(code);
+  }
   const editor = useRef();
   const view = useRef();
 
@@ -223,7 +225,7 @@ const Playground = () => {
   );
 };
 
-export default Playground;
+export default PdfEditor;
 
 function useDebounce(value, delay) {
   const [debouncedValue, setDebouncedValue] = useState(value);

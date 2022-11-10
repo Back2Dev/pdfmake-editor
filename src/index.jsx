@@ -1,6 +1,7 @@
 import React from "react";
 import { EditorProvider } from "./components/code-editor/provider";
-import Playground from "./components/code-editor";
+import EditorPlayground from "./components/code-editor/editor-playground";
+import PdfEditor from "./components/code-editor-state/pdf-editor";
 
 import basics from "./sample/sample-files/basics";
 import styles1 from "./sample/sample-files/styles1";
@@ -44,23 +45,25 @@ const mapForms = {
   q18: Q18,
 };
 
-export { EditorProvider, Playground, mapForms, samples };
+export { EditorProvider, EditorPlayground, mapForms, samples };
 
-const PdfPlayground = ({ code, setCode, cmeditor = true, darktheme = false }) => {
-  cmeditor = cmeditor;
-  darktheme = darktheme;
-  return (
-    <>
-      <EditorProvider
-        code={code}
-        setCode={setCode}
-        darktheme={darktheme}
-        cmeditor={cmeditor}
-      >
-        <Playground />
-      </EditorProvider>
-    </>
-  );
-};
+export default PdfEditor;
 
-export default PdfPlayground;
+// const PdfPlayground = ({ code, setCode, cmeditor = true, darktheme = false }) => {
+//   cmeditor = cmeditor;
+//   darktheme = darktheme;
+//   return (
+//     <>
+//       <EditorProvider
+//         code={code}
+//         setCode={setCode}
+//         darktheme={darktheme}
+//         cmeditor={cmeditor}
+//       >
+//         <EditorPlayground />
+//       </EditorProvider>
+//     </>
+//   );
+// };
+
+// export default PdfPlayground;

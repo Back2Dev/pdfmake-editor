@@ -35,7 +35,7 @@ export default App;
 
 ```javascript
 import React from "react";
-import { EditorProvider, Editor } from "pdfmake-editor";
+import { EditorProvider, EditorPlayground } from "pdfmake-editor";
 
 const App = () => {
   // initial code
@@ -49,10 +49,10 @@ const App = () => {
   // darktheme default value is false.
   return (
     <EditorProvider code={code} setCode={setCode}>
-      <Editor />
+      <EditorPlayground />
     </EditorProvider>
     // <EditorProvider code={code} setCode={setCode} cmeditor={true} darktheme={true}>
-    //   <Editor />
+    //   <EditorPlayground />
     // </EditorProvider>
   );
 };
