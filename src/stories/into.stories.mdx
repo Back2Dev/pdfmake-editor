@@ -1,0 +1,16 @@
+<!-- Checkbox.stories.mdx -->
+
+import { Meta } from "@storybook/addon-docs";
+import Playground from "../components/code-editor/index";
+import { EditorProvider } from "../components/code-editor/provider";
+import "../components/code-editor/style.css";
+
+<Meta title="MDX/Intro" component={Playground} />;
+
+export const Template = (args) => {
+  return (
+    <EditorProvider {...args}>
+      <Playground />
+    </EditorProvider>
+  );
+};

@@ -1,7 +1,7 @@
 {
-  "name": "pd-playground",
-  "version": "1.0.6",
-  "description": "pdf-playground",
+  "name": "pdfmake-editor",
+  "version": "1.0.0",
+  "description": "pdfmake-editor",
   "main": "./src/index.jsx",
   "scripts": {
     "build": "webpack",

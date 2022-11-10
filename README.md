@@ -1,16 +1,16 @@
-# pd-playground
+# pdfmake-editor
 
 ### Install
 
 ```
-npm i pd-playground
+npm i pdfmake-editor
 ```
 
-### Use PdfPlayground
+### Use PdfEditor only
 
 ```javascript
 import React from "react";
-import PdfPlayground from "pd-playground";
+import PdfEditor from "pdfmake-editor";
 
 const App = () => {
   // initial code
@@ -23,8 +23,8 @@ const App = () => {
   // cmeditor is available default value is true. True mean use Codermirror.
   // darktheme is available default value is false. Change the theme for Codermirror.
   return (
-    <PdfPlayground code={code} setCode={setCode} />
-    // <PdfPlayground code={code} setCode={setCode} cmeditor={true} darktheme={false} />
+    <PdfEditor code={code} setCode={setCode} />
+    // <PdfEditor code={code} setCode={setCode} cmeditor={true} darktheme={false} />
   );
 };
 
@@ -35,7 +35,7 @@ export default App;
 
 ```javascript
 import React from "react";
-import { EditorProvider, Playground } from "pd-playground";
+import { EditorProvider, Editor } from "pdfmake-editor";
 
 const App = () => {
   // initial code
@@ -49,10 +49,10 @@ const App = () => {
   // darktheme default value is false.
   return (
     <EditorProvider code={code} setCode={setCode}>
-      <Playground />
+      <Editor />
     </EditorProvider>
     // <EditorProvider code={code} setCode={setCode} cmeditor={true} darktheme={true}>
-    //   <Playground />
+    //   <Editor />
     // </EditorProvider>
   );
 };
@@ -65,18 +65,19 @@ export default App;
 Use sample by import `mapForms` and `samples` javascript object.
 
 ```javascript
-import { mapForms, samples } from "pd-playground";
+import { mapForms, samples } from "pdfmake-editor";
+import PdfEditor from "pdfmake-editor";
 
 ...
 
-return <PdfPlayground code={mapForms[Object.keys(mapForms)[0]]} />
+return <PdfEditor code={mapForms[Object.keys(mapForms)[0]]} />
 
 ```
 
 ### Local development
 
 Pull the repository to local
-cd to 'pd-playground' folder
+cd to 'pdfmake-editor' folder
 
 ```
 npm i
@@ -87,11 +88,11 @@ npm link  'test react folder'/node_modules/react
 Then go to Test folder
 
 ```
-npm link pd-Playground
+npm link pdfmake-editor
 ```
 
 When you finish test remember to unlink by use
 
 ```
-npm unlink pd-playground
+npm unlink pdfmake-editor
 ```
