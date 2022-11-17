@@ -158,7 +158,18 @@ const PdfEditor = ({ code, setCode, cmeditor = true, darktheme = false }) => {
     <>
       <Grid container className="main-area">
         <Box sx={{ height: 1 }} width="100vw">
-          <Split sx={{ height: 1 }} className="split">
+          <Split
+            className="split"
+            sizes={[50, 50]}
+            minSize={400}
+            expandToMin={false}
+            gutterSize={8}
+            gutterAlign="center"
+            snapOffset={30}
+            dragInterval={1}
+            direction="horizontal"
+            cursor="col-resize"
+          >
             <Grid sx={{ height: 1 }} item>
               <Box
                 sx={{
