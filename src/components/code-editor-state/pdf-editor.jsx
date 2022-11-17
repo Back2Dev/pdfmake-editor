@@ -9,7 +9,7 @@ import { EditorState } from "@codemirror/state";
 import { EditorView, keymap } from "@codemirror/view";
 import { defaultKeymap, indentWithTab } from "@codemirror/commands";
 import { javascript } from "@codemirror/lang-javascript";
-import { basicSetup } from "codemirror";
+import { basicSetup } from "@uiw/codemirror-extensions-basic-setup";
 import { lintKeymap } from "@codemirror/lint";
 
 import "../code-editor/style.css";
@@ -86,8 +86,13 @@ const PdfEditor = ({ code, setCode, cmeditor = true, darktheme = false }) => {
     const startState = EditorState.create({
       doc: code,
       extensions: [
-        basicSetup,
-        keymap.of([defaultKeymap, indentWithTab, lintKeymap]),
+        basicSetup({
+          foldGutter: true,
+          dropCursor: true,
+          allowMultipleSelections: true,
+          indentOnInput: true,
+        }),
+        keymap.of([...defaultKeymap, lintKeymap, indentWithTab]),
         onUpdate,
         javascript(),
         theme,
