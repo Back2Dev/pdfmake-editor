@@ -12,6 +12,7 @@ import { defaultKeymap, indentWithTab } from "@codemirror/commands";
 import { javascript } from "@codemirror/lang-javascript";
 import { basicSetup } from "@uiw/codemirror-extensions-basic-setup";
 import { lintKeymap } from "@codemirror/lint";
+import { oneDarkTheme } from "@codemirror/theme-one-dark";
 
 import "./style.css";
 
@@ -54,7 +55,6 @@ let myTheme = EditorView.theme(
   },
   { dark: true }
 );
-import { oneDarkTheme } from "@codemirror/theme-one-dark";
 
 const EditorPlayground = () => {
   const { cmeditor, err, setErr, code, setCode, darktheme } =

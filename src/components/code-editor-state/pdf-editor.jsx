@@ -11,7 +11,7 @@ import { defaultKeymap, indentWithTab } from "@codemirror/commands";
 import { javascript } from "@codemirror/lang-javascript";
 import { basicSetup } from "@uiw/codemirror-extensions-basic-setup";
 import { lintKeymap } from "@codemirror/lint";
-
+import { oneDarkTheme } from "@codemirror/theme-one-dark";
 import "../code-editor/style.css";
 
 // pdfmake dependencies
@@ -53,7 +53,6 @@ let myTheme = EditorView.theme(
   },
   { dark: true }
 );
-import { oneDarkTheme } from "@codemirror/theme-one-dark";
 
 const PdfEditor = ({ code, setCode, cmeditor = true, darktheme = false }) => {
   const [err, setErr] = React.useState("");
