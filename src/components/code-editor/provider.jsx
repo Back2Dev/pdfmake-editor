@@ -7,48 +7,41 @@ export default EditorContext;
 function editorReducer(state, action) {
   const { type, payload } = action;
   switch (type) {
-    // case "setCode":
-    //   return {
-    //     ...state,
-    //     code: payload,
-    //   };
+    case "setCode":
+      return { ...state, code: payload };
     case "setFilename":
-      return {
-        ...state,
-        filename: payload,
-      };
+      return { ...state, filename: payload };
     case "setDarkTheme":
-      return {
-        ...state,
-        darktheme: payload,
-      };
+      return { ...state, darktheme: payload };
     case "setCmeditor":
-      return {
-        ...state,
-        cmeditor: payload,
-      };
+      return { ...state, cmeditor: payload };
     case "setErr":
-      return {
-        ...state,
-        err: payload,
-      };
+      return { ...state, err: payload };
     default:
       return state;
   }
 }
 
 // Provider
-export const EditorProvider = ({ children, code, setCode }) => {
+export const EditorProvider = ({
+  children,
+  code,
+  setCode,
+  darktheme = false,
+  cmeditor = true,
+}) => {
   const [state, dispatch] = React.useReducer(editorReducer, {
-    // code: source || 'dd = {content: "Hello "}',
     filename: "New File",
-    darktheme: false,
-    cmeditor: true,
     err: "",
+    darktheme: darktheme,
+    cmeditor: cmeditor,
   });
-  // const setCode = (data) => {
-  //   dispatch({ type: "setCode", payload: data });
-  // };
+
+  setCode = setCode
+    ? setCode
+    : (data) => {
+        dispatch({ type: "setCode", payload: data });
+      };
   const setFilename = (data) => {
     dispatch({ type: "setFilename", payload: data });
   };
@@ -68,6 +61,8 @@ export const EditorProvider = ({ children, code, setCode }) => {
         ...state,
         code,
         setCode,
+        darktheme,
+        cmeditor,
         setFilename,
         setCmeditor,
         setDarkTheme,
