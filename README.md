@@ -4,7 +4,6 @@
 
 ```
 npm i pdfmake-editor
-```
 
 ### Use PdfEditor only
 
@@ -25,7 +24,6 @@ const App = () => {
   return (
     <PdfEditor code={code} setCode={setCode} />
     // <PdfEditor code={code} setCode={setCode} cmeditor={true} darktheme={false} />
-  );
 };
 
 export default App;
@@ -85,7 +83,6 @@ cd to 'pdfmake-editor' folder
 ```
 npm i
 npm link
-npm link  'test react folder'/node_modules/react
 ```
 
 Then go to Test folder
