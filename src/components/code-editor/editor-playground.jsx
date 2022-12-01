@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import EditorContext from "./provider";
+import EditorContext from "./provider.jsx";
 import Split from "react-split";
 import { Box, Grid, FormGroup, Button } from "@mui/material";
 // codeeditor dependencies

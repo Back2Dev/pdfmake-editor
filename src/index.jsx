@@ -1,7 +1,7 @@
 import React from "react";
-import { EditorProvider } from "./components/code-editor/provider";
-import EditorPlayground from "./components/code-editor/editor-playground";
-import PdfEditor from "./components/code-editor-state/pdf-editor";
+import { EditorProvider } from "./components/code-editor/provider.jsx";
+import EditorPlayground from "./components/code-editor/editor-playground.jsx";
+import PdfEditor from "./components/code-editor-state/pdf-editor.jsx";
 
 import basics from "./sample/sample-files/basics";
 import styles1 from "./sample/sample-files/styles1";
