@@ -1,6 +1,6 @@
 {
-  "name": "pdfmake-editor1",
-  "version": "1.0.11",
+  "name": "pdfmake-editor",
+  "version": "1.0.0",
   "description": "pdfmake-editor",
   "main": "./build/index.js",
   "scripts": {
