@@ -1,2 +1,4 @@
-/node_modules
-/src/stories
+/src
+.babelrc
+webpack.config.js
+/storybook-static

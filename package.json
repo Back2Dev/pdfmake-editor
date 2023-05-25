@@ -1,18 +1,20 @@
 {
-  "name": "pd-playground",
-  "version": "1.0.6",
-  "description": "pdf-playground",
-  "main": "./src/index.jsx",
+  "name": "pdfmake-editor",
+  "version": "1.0.1",
+  "description": "pdfmake-editor",
+  "main": "./build/index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "b2b",
   "license": "ISC",
   "peerDependencies": {
     "@babel/core": "7.14.8",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "pdfmake": "^0.2.5"
+    "pdfmake": "^0.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
     "@codemirror/commands": "^6.1.2",
@@ -27,11 +29,33 @@
     "@mui/lab": "^5.0.0-alpha.101",
     "@mui/material": "^5.10.7",
     "@react-icons/all-files": "^4.1.0",
+    "@uiw/codemirror-extensions-basic-setup": "^4.13.2",
     "codemirror": "^6.0.1",
+    "pdfmake": "^0.2.5",
     "prettier": "^2.1.2",
     "react-icons": "^4.6.0",
     "react-router-dom": "^6.4.2",
     "react-split": "^2.0.14"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-webpack4": "^6.5.13",
+    "@storybook/manager-webpack4": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@storybook/testing-library": "^0.0.13",
+    "bable-loader": "^0.0.1-security",
+    "css-loader": "^6.7.2",
+    "html-webpack-plugin": "^5.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  }
 }
