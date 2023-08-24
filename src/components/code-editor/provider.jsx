@@ -1,66 +1,66 @@
-import React from "react";
+import React from 'react'
 
-const EditorContext = React.createContext("editor");
-export default EditorContext;
+const EditorContext = React.createContext('editor')
+export default EditorContext
 
 // Reducer Function
 function editorReducer(state, action) {
-  const { type, payload } = action;
+  const { type, payload } = action
   switch (type) {
     // case "setCode":
     //   return {
     //     ...state,
     //     code: payload,
     //   };
-    case "setFilename":
+    case 'setFilename':
       return {
         ...state,
         filename: payload,
-      };
-    case "setDarkTheme":
+      }
+    case 'setDarkTheme':
       return {
         ...state,
         darktheme: payload,
-      };
-    case "setCmeditor":
+      }
+    case 'setCmeditor':
       return {
         ...state,
         cmeditor: payload,
-      };
-    case "setErr":
+      }
+    case 'setErr':
       return {
         ...state,
         err: payload,
-      };
+      }
     default:
-      return state;
+      return state
   }
 }
 
 // Provider
-export const EditorProvider = ({ children, code, setCode }) => {
+export const EditorProvider = ({ children, code, setCode, sampleData, height }) => {
   const [state, dispatch] = React.useReducer(editorReducer, {
     // code: source || 'dd = {content: "Hello "}',
-    filename: "New File",
+    filename: 'New File',
     darktheme: false,
     cmeditor: true,
-    err: "",
-  });
+    err: '',
+  })
   // const setCode = (data) => {
   //   dispatch({ type: "setCode", payload: data });
   // };
   const setFilename = (data) => {
-    dispatch({ type: "setFilename", payload: data });
-  };
+    dispatch({ type: 'setFilename', payload: data })
+  }
   const setDarkTheme = (data) => {
-    dispatch({ type: "setDarkTheme", payload: data });
-  };
+    dispatch({ type: 'setDarkTheme', payload: data })
+  }
   const setCmeditor = (data) => {
-    dispatch({ type: "setCmeditor", payload: data });
-  };
+    dispatch({ type: 'setCmeditor', payload: data })
+  }
   const setErr = (data) => {
-    dispatch({ type: "setErr", payload: data });
-  };
+    dispatch({ type: 'setErr', payload: data })
+  }
 
   return (
     <EditorContext.Provider
@@ -72,9 +72,11 @@ export const EditorProvider = ({ children, code, setCode }) => {
         setCmeditor,
         setDarkTheme,
         setErr,
+        sampleData,
+        height,
       }}
     >
       {children}
     </EditorContext.Provider>
-  );
-};
+  )
+}
