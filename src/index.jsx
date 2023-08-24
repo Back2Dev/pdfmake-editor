@@ -1,29 +1,15 @@
-import React from "react";
-import { EditorProvider } from "./components/code-editor/provider";
-import Playground from "./components/code-editor";
-import Header from "./header/header";
-import Footer from "./footer/footer";
+import React from 'react'
+import { EditorProvider } from './components/code-editor/provider'
+import Playground from './components/code-editor'
 
-export { EditorProvider, Playground };
+export { EditorProvider, Playground }
 
-console.log(Playground);
-
-const PdfPlayground = ({code, setCode}) => {
-  // initial code
-  const initialCode = 'dd = {content: "Hello "}';
-
-  // code state
-  // const [code, setCode] = React.useState(initialCode);
-
+const PdfPlayground = ({ code, setCode, sampleData, height }) => {
   return (
-    <>
-      <EditorProvider code={code} setCode={setCode}>
-        {/* <Header /> */}
-        <Playground />
-      </EditorProvider>
-      {/* <Footer /> */}
-    </>
-  );
-};
+    <EditorProvider code={code} setCode={setCode} sampleData={sampleData} height={height}>
+      <Playground />
+    </EditorProvider>
+  )
+}
 
-export default PdfPlayground;
+export default PdfPlayground
